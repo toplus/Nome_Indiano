@@ -1,6 +1,7 @@
 
 function traduci(nome){
-	nome_scherzo = getCookie("nome_scherzo");
+	//nome_scherzo = getCookie("nome_scherzo");
+	nome_scherzo = window.localStorage.getItem("nome");
 	if(!nome)
 		return;
 	if(nome == nome_scherzo)
@@ -51,9 +52,11 @@ function set(){
 function prendi_nome(){
 	nome_scherzo = document.getElementById("nome_scherzo").value;
 	top.location.href = "index2.html";
-	setCookie("nome_scherzo",nome_scherzo,10);
+	//setCookie("nome_scherzo",nome_scherzo,10);
+	window.localStorage.setItem("nome", nome_scherzo);
 }
 
+/*
 function setCookie(c_name,value,exdays){
 	var exdate=new Date();
 	exdate.setDate(exdate.getDate() + exdays);
@@ -79,4 +82,4 @@ function getCookie(c_name){
 	c_value = unescape(c_value.substring(c_start,c_end));
 	}
 	return c_value;
-}
+}*/
