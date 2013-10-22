@@ -3,14 +3,18 @@
 	<head>
 		<script type="text/javascript" src="./js/funzioni.js"></script>
 		<script type="text/javascript" src="./js/jquery.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/stile.css" />
 	</head>
 	<body>
-		<h1>Nome indiano</h1>
-		<form action="#" name="input_nome">	
-			<input type="text" name="nome"/>
-			<input type="button" name="trad" value="Nome Indiano" onclick="traduci(this.form.nome.value)"/>
-		</form>
+		<img src="img/logo.gif" width="300"/>
+		<div id="div_input" >
+			<form action="#" name="input_nome">	
+				<input type="text" name="nome"/>
+				<br/>
+				<input type="button" class="button" name="trad" value="Nome Indiano" onclick="traduci(this.form.nome.value)"/>
+			</form>
 		<h2 id="nome2"></h2>
-			<input type="button" name="back" value="back" onclick="top.location.href = 'index.html'"/>
+			<input type="button" class="button" name="back" value="back" onclick="top.location.href = 'index.html'"/>
+		</div>
 	</body>
 </html>
