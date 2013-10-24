@@ -9,27 +9,29 @@ function traduci(nome){
 	if(!nome)
 		return;
 	if(nome == nome_scherzo)
-		document.getElementById('nome2').innerHTML = 'Rutto di culo';
+		document.getElementById('nome2').innerHTML = "<br/>Rutto di culo <br/><br/><img src=\"img/indiano.jpg\" width=250 />";
 	else{
 		value = 0;
 		for( i=0; i < nome.length; i++)
 			value += nome.charCodeAt(i);
 		opz = (value%nomi.length)+1;
 		nome2 = nomi[opz];
-		document.getElementById('nome2').innerHTML = nome2;	
+		document.getElementById('nome2').innerHTML = "<br/>" + nome2 + "<br/><br/><img src=\"img/indiano.jpg\" width=250 />";	
 	}
 }
 
 function set(){
 	$("#settings").remove();
 	$("#play").remove();
-	$("#div_settings").append("<h2>Inserisci nome:</h2>" +
+	$("#div_settings").append("<div id=\"scritte\">Inserisci nome scherzo:</h2></div><br/>" +
 							   "<input type=\"text\" name=\"nome_scherzo\" id=\"nome_scherzo\"/>" +
-							  "<input type=\"button\" onclick=\"prendi_nome()\" value=\"ok\" />");	
+							  "<br/><br/><input type=\"button\" class=\"button\" onclick=\"prendi_nome()\" value=\"ok\" />");	
 }
 
 function prendi_nome(){
 	nome_scherzo = document.getElementById("nome_scherzo").value;
+	if(!nome_scherzo)
+		return;
 	top.location.href = "index2.html";
 	//setCookie("nome_scherzo",nome_scherzo,10);
 	window.localStorage.setItem("nome", nome_scherzo);

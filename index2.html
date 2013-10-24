@@ -6,15 +6,21 @@
 		<link rel="stylesheet" type="text/css" href="css/stile.css" />
 	</head>
 	<body>
-		<img src="img/logo.gif" width="300"/>
 		<div id="div_input" >
+		<img src="img/logo.gif" width="300"/>
+			<br/>
+			<div id="scritte">Inserisci nome:</div>
+			<br/>
 			<form action="#" name="input_nome">	
 				<input type="text" name="nome"/>
 				<br/>
+				<br/>
 				<input type="button" class="button" name="trad" value="Nome Indiano" onclick="traduci(this.form.nome.value)"/>
 			</form>
-		<h2 id="nome2"></h2>
-			<input type="button" class="button" name="back" value="back" onclick="top.location.href = 'index.html'"/>
+		<div id="nome2"></div>
+			<div id="bottone_sotto">
+				<input type="button" class="button" name="back" value="back" onclick="top.location.href = 'index.html'"/>
+			</div>
 		</div>
 	</body>
 </html>

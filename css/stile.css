@@ -41,7 +41,7 @@ body {
 	font-style:italic;
 	height:45px;
 	line-height:45px;
-	width:147px;
+	min-width:160px;
 	text-decoration:none;
 	text-align:center;
 	text-shadow:0px -1px 0px #ded17c;
@@ -54,4 +54,26 @@ body {
 }.button:active {
 	position:relative;
 	top:1px;
+}
+#bottone_sotto{
+	position:fixed;
+	width:100%;
+	bottom:0px;
+	margin:auto;
+	text-align:center;
+}
+
+#scritte{
+	color:#e6c019;
+	font-family:Georgia;
+	font-size:18px;
+	font-weight:bold;
+}
+
+#nome2{
+	color:#e6c019;
+	font-family:Georgia;
+	font-size:20px;
+	font-weight:bold;
+	font-style:italic;
 }
